@@ -26,7 +26,7 @@ const build = () => {
       globals: isUMD ? [] : globals,
       sourcemap: true,
       name: pkg.moduleName || pkg.name,
-      file: `dist/index${isUMD ? '' : '.cjs'}.js`
+      file: `dist/index${isUMD ? '' : '.c'}.js`
     }
 
     const bundle = await rollup.rollup(inputOptions)
