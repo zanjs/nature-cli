@@ -33,9 +33,7 @@ const plugins = [,
     extensions: ['.scss']
   }),
   resolve({
-    jsnext: true,
-    main: true,
-    browser: true
+    mainFields: ["jsnext", "main", "browser"]
   }),
   commonjs(),
   babel({
@@ -48,5 +46,5 @@ const plugins = [,
 module.exports = {
   plugins,
   external,
-  globals: Object.keys(external).map(value => ({[value]: value}))
+  globals: Object.keys(external).map(value => ({ [value]: value }))
 }
